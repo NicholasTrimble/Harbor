@@ -4,10 +4,6 @@ import datetime
 REQUIRED_KEYS = ["id", "areaDesc", "event", "severity", "urgency"]
 
 def validate_and_transform(raw_json_data):
-    """
-    Takes raw JSON dictionary from the NOAA API, checks for missing schema structures,
-    and returns a clean, standard list of internal dictionaries ready to insert.
-    """
     cleaned_records = []
     schema_errors = {"missing_fields": [], "malformed_records": 0}
 
